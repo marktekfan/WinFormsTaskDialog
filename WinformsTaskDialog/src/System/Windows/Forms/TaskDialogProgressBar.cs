@@ -4,7 +4,6 @@
 
 using System.ComponentModel;
 using System.Diagnostics;
-using WinformsTaskDialog.Resources;
 using static Interop;
 
 namespace System.Windows.Forms

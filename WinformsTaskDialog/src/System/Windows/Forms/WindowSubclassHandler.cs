@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
-using WinformsTaskDialog.Resources;
 using static Interop;
 
 namespace System.Windows.Forms
