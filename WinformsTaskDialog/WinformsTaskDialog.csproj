@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<RootNamespace>System.Windows.Forms</RootNamespace>
+		<AssemblyName>WinformsTaskDialog</AssemblyName>
+		<Description>
+			This is a backport of the Microsoft Winforms TaskDialog to net472.
+			Functionally 100% identical to the Microsoft version.
+			Source code also 100% identical, except where backporting to net472 and C#10 was required.
+
+		</Description>
+		<PackageId>WinForms.TaskDialog</PackageId>
+		<Product>Winforms.TaskDialog</Product>
+		<Company />
+		<Authors>Backported to net472 by Mark Langezaal</Authors>
+		<Copyright />
+		<PackageLicenseExpression>MIT license</PackageLicenseExpression>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoWarn>CS0649</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="System.Windows.Forms" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="src\Resources\SR.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>SR.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="src\Resources\SR.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>SR.Designer.cs</LastGenOutput>
+			<CustomToolNamespace>WinformsTaskDialog.Resources</CustomToolNamespace>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>

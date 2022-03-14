@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TaskDialogButtonTextMustNotBeNull" xml:space="preserve">
+    <value>The text of a custom button must not be null or an empty string.</value>
+  </data>
+  <data name="TaskDialogCannotNavigateClosedDialog" xml:space="preserve">
+    <value>Cannot navigate the dialog when it has already closed.</value>
+  </data>
+  <data name="TaskDialogCannotNavigateWithinNavigationEventHandler" xml:space="preserve">
+    <value>Cannot navigate the dialog from an event handler that is called from within navigation.</value>
+  </data>
+  <data name="TaskDialogCannotNavigateWithinRadioButtonCheckedChanged" xml:space="preserve">
+    <value>Cannot navigate the dialog from within the {0} event of one of the radio buttons of the current task dialog.</value>
+  </data>
+  <data name="TaskDialogCannotNavigateWithoutDialog" xml:space="preserve">
+    <value>Cannot navigate from a page not bound to a dialog.</value>
+  </data>
+  <data name="TaskDialogCannotRemoveProgressBarWhileDialogIsShown" xml:space="preserve">
+    <value>Cannot remove the progress bar while the task dialog is shown.</value>
+  </data>
+  <data name="TaskDialogCannotSetPropertyOfBoundPage" xml:space="preserve">
+    <value>Cannot set this property or call this method while the page is bound to a task dialog.</value>
+  </data>
+  <data name="TaskDialogCannotSetPropertyOfShownDialog" xml:space="preserve">
+    <value>Cannot set this property while the task dialog is shown.</value>
+  </data>
+  <data name="TaskDialogCannotSetRadioButtonCheckedWithinCheckedChangedEvent" xml:space="preserve">
+    <value>Cannot set the {0} property from within the {1} event of one of the radio buttons of the current task dialog.</value>
+  </data>
+  <data name="TaskDialogCannotUncheckRadioButtonWhileBound" xml:space="preserve">
+    <value>Cannot uncheck a radio button while it is bound to a task dialog.</value>
+  </data>
+  <data name="TaskDialogCannotUpdateAfterNavigation" xml:space="preserve">
+    <value>Cannot manipulate the task dialog immediately after navigating it. Please wait for the {0} event of the next page to occur.</value>
+  </data>
+  <data name="TaskDialogCannotUpdateIconType" xml:space="preserve">
+    <value>Cannot update the icon from a handle icon type to a non-handle icon type, and vice versa.</value>
+  </data>
+  <data name="TaskDialogCanUpdateStateOnlyWhenShown" xml:space="preserve">
+    <value>Can only update the state of a task dialog while it is shown.</value>
+  </data>
+  <data name="TaskDialogCollectionAlreadyBound" xml:space="preserve">
+    <value>One of the collections of this {0} is already bound to a {1} instance.</value>
+  </data>
+  <data name="TaskDialogControlAlreadyAddedToCollection" xml:space="preserve">
+    <value>This control has already been added to the collection.</value>
+  </data>
+  <data name="TaskDialogControlAlreadyBound" xml:space="preserve">
+    <value>One of the controls of this {0} is already bound to a {1} instance.</value>
+  </data>
+  <data name="TaskDialogControlIsPartOfOtherCollection" xml:space="preserve">
+    <value>This control is already part of a different collection.</value>
+  </data>
+  <data name="TaskDialogControlNotBound" xml:space="preserve">
+    <value>This control is not currently bound to a task dialog.</value>
+  </data>
+  <data name="TaskDialogControlNotCreated" xml:space="preserve">
+    <value>The control has not been created.</value>
+  </data>
+  <data name="TaskDialogInstanceAlreadyShown" xml:space="preserve">
+    <value>This {0} instance is already being shown.</value>
+  </data>
+  <data name="TaskDialogNavigationNotCompleted" xml:space="preserve">
+    <value>Navigation of the task dialog did not complete yet. Please wait for the {0} event to occur.</value>
+  </data>
+  <data name="TaskDialogVisualStylesNotEnabled" xml:space="preserve">
+    <value>Visual styles are not enabled. Please call {0} before showing the task dialog.</value>
+  </data>
+  <data name="TaskDialogDefaultButtonMustExistInCollection" xml:space="preserve">
+    <value>The default button must exist in the buttons collection.</value>
+  </data>
+  <data name="TaskDialogOnlySingleRadioButtonCanBeChecked" xml:space="preserve">
+    <value>Only a single radio button can be set as checked.</value>
+  </data>
+  <data name="TaskDialogPageIsAlreadyBound" xml:space="preserve">
+    <value>This {0} instance is already bound to a {1} instance.</value>
+  </data>
+  <data name="TaskDialogRadioButtonTextMustNotBeNull" xml:space="preserve">
+    <value>The text of a radio button must not be null or an empty string.</value>
+  </data>
+  <data name="TaskDialogTooManyButtonsAdded" xml:space="preserve">
+    <value>Too many custom buttons or radio buttons have been added.</value>
+  </data>
+  <data name="TaskDialogCannotSetTextForStandardButton" xml:space="preserve">
+    <value>Cannot set the text for a standard button.</value>
+  </data>
+  <data name="TaskDialogCannotShowCustomButtonsAndCommandLinks" xml:space="preserve">
+    <value>Cannot show both custom buttons and command links at the same time.</value>
+  </data>
+  <data name="WindowSubclassHandlerWndProcIsNotExceptedOne" xml:space="preserve">
+    <value>The current window procedure is not the expected one.</value>
+  </data>
+  <data name="IllegalCrossThreadCall" xml:space="preserve">
+    <value>Cross-thread operation not valid: Control '{0}' accessed from a thread other than the thread it was created on.</value>
+  </data>
+</root>
