@@ -2,7 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.ComponentModel;
 using static Interop;
 
 namespace System.Windows.Forms
@@ -189,17 +188,7 @@ namespace System.Windows.Forms
             get => _expanderPosition;
             set
             {
-                if (!ClientUtils.IsEnumValid(
-                    value,
-                    (int)value,
-                    (int)TaskDialogExpanderPosition.AfterText,
-                    (int)TaskDialogExpanderPosition.AfterFootnote))
-                {
-                    throw new InvalidEnumArgumentException(
-                        nameof(value),
-                        (int)value,
-                        typeof(TaskDialogExpanderPosition));
-                }
+                SourceGenerated.EnumValidator.Validate(value);
 
                 DenyIfBound();
 

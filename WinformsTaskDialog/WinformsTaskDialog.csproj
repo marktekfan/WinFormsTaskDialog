@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
-		<LangVersion>9.0</LangVersion>
+		<LangVersion>10.0</LangVersion>
 		<RootNamespace>System.Windows.Forms</RootNamespace>
 		<AssemblyName>WinformsTaskDialog</AssemblyName>
 		<Description>
@@ -17,7 +17,7 @@
 		<Authors>Backported to net472 by Mark Langezaal</Authors>
 		<Copyright />
 		<PackageLicenseExpression>MIT license</PackageLicenseExpression>
-		<Nullable>enable</Nullable>
+		<Nullable>annotations</Nullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

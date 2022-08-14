@@ -2,7 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using WinformsTaskDialog.Resources;
 using static Interop;
 
 namespace System.Windows.Forms
@@ -61,7 +60,7 @@ namespace System.Windows.Forms
 
         internal ComCtl32.TDF Bind(TaskDialogPage page)
         {
-            BoundPage = page ?? throw new ArgumentNullException(nameof(page));
+            BoundPage = page.OrThrowIfNull();
 
             // Use the current value of IsCreatable to determine if the control is
             // created. This is important because IsCreatable can change while the

@@ -2,13 +2,9 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using WinformsTaskDialog.Resources;
 using static Interop;
 
 namespace System.Windows.Forms
@@ -344,7 +340,7 @@ namespace System.Windows.Forms
         public static TaskDialogButton ShowDialog(TaskDialogPage page,
                                                   TaskDialogStartupLocation startupLocation = TaskDialogStartupLocation.CenterOwner)
             => ShowDialog(IntPtr.Zero,
-                          page ?? throw new ArgumentNullException(nameof(page)),
+                          page.OrThrowIfNull(),
                           startupLocation);
 
         /// <summary>
@@ -376,8 +372,8 @@ namespace System.Windows.Forms
         /// </exception>
         public static TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page,
                                                   TaskDialogStartupLocation startupLocation = TaskDialogStartupLocation.CenterOwner)
-            => ShowDialog(owner?.Handle ?? throw new ArgumentNullException(nameof(owner)),
-                          page ?? throw new ArgumentNullException(nameof(page)),
+            => ShowDialog(owner.OrThrowIfNull().Handle,
+                          page.OrThrowIfNull(),
                           startupLocation);
 
         /// <summary>
@@ -834,7 +830,7 @@ namespace System.Windows.Forms
             IntPtr wParam)
         {
             Debug.Assert(_boundPage is not null);
-            if (_boundPage is null) throw new NullReferenceException("_boundPage is null");
+            if (_boundPage is null) throw new NullReferenceException("_boundPage is null"); //BP
 
             // Set the hWnd as this may be the first time that we get it.
             bool isFirstNotification = _handle == IntPtr.Zero;
@@ -1382,7 +1378,7 @@ namespace System.Windows.Forms
                             pszFooter = MarshalString(page.Footnote?.Text),
                             nDefaultButton = defaultButtonID,
                             nDefaultRadioButton = defaultRadioButtonID,
-                            pfCallback = Marshal.GetFunctionPointerForDelegate(s_callbackProcDelegate),
+                            pfCallback = Marshal.GetFunctionPointerForDelegate(s_callbackProcDelegate), //BP
                             lpCallbackData = _instanceHandlePtr
                         };
 
@@ -1562,7 +1558,7 @@ namespace System.Windows.Forms
             }
         }
 
-        private bool CanCatchCallbackException()
+        private static bool CanCatchCallbackException()
         {
             // Catch all exceptions, except when the NativeWindow indicates
             // that a debuggable WndProc callback should be used, in which
@@ -1577,7 +1573,7 @@ namespace System.Windows.Forms
         ///   Called when an exception occurs in dispatching messages through
         ///   the task dialog callback or its window procedure.
         /// </summary>
-        private void HandleCallbackException(Exception e) => Application.OnThreadException(e);
+        private static void HandleCallbackException(Exception e) => Application.OnThreadException(e);
 
         private void SendTaskDialogMessage(
             ComCtl32.TDM message,

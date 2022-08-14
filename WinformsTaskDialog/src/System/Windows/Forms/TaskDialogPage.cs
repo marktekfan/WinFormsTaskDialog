@@ -2,10 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using WinformsTaskDialog.Resources;
 using static Interop;
 
 namespace System.Windows.Forms
@@ -136,7 +133,7 @@ namespace System.Windows.Forms
                 // access the controls from the task dialog's callback.
                 DenyIfBound();
 
-                _buttons = value ?? throw new ArgumentNullException(nameof(value));
+                _buttons = value.OrThrowIfNull();
             }
         }
 
@@ -167,7 +164,7 @@ namespace System.Windows.Forms
                 // access the controls from the task dialog's callback.
                 DenyIfBound();
 
-                _radioButtons = value ?? throw new ArgumentNullException(nameof(value));
+                _radioButtons = value.OrThrowIfNull();
             }
         }
 
@@ -595,7 +592,6 @@ namespace System.Windows.Forms
         {
             // From a native point of view, the string is empty if its first
             // character is a NUL char.
-            if (str == null) return true;
             return string.IsNullOrEmpty(str) || str[0] == '\0';
         }
 
@@ -812,6 +808,7 @@ namespace System.Windows.Forms
             //_boundStandardButtonsByID = new Dictionary<int, TaskDialogButton>(
             //    buttons.Where(e => e.IsStandardButton)
             //    .Select(e => new KeyValuePair<int, TaskDialogButton>(e.ButtonID, e)));
+            //BP FullFW does not have a Dictionary KeyValuePair initializer
             _boundStandardButtonsByID =
                 buttons.Where(e => e.IsStandardButton).ToDictionary(e => e.ButtonID);
 
